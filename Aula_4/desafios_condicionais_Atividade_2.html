@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Condicionais - Atividade 2</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_ApprovalStatus msdt:dt="string">0</mso:_ApprovalStatus>
+<mso:_ApprovalAssignedTo msdt:dt="string"></mso:_ApprovalAssignedTo>
+<mso:_ApprovalRespondedBy msdt:dt="string"></mso:_ApprovalRespondedBy>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body>
+
+    <!-- Atividade 2: Financeiro - Desconto Progressivo  Uma loja oferece descontos progressivos conforme o valor da compra:
+Compras acima de R$ 500,00 recebem 20% de desconto. Compras entre R$ 300,00 e R$ 499,99 recebem 10% de desconto. Compras abaixo de R$ 300,00 não recebem desconto.
+Crie um programa que receba o valor total da compra e exiba o valor final com desconto aplicado.  -->
+
+
+    <script>
+    // SOLUÇÃO FEITA POR MIM. PARA TESTAR UMA DAS VERSÕES DO CÓDIGO NÃO ESQUECER DE TRANSFORMAR EM COMENTÁRIO A VERSÃO NÃO USADA.
+
+        let ValorDaCompra = prompt("Qual o valor da compra?");
+        let ValorTotalComDesconto10 = ValorDaCompra * 0.10;
+        let ValorTotalComDesconto20 = ValorDaCompra * 0.20;
+        if (ValorDaCompra <= 299.99) {
+            alert("O valor da compra é R$ " + ValorDaCompra + " reais.");
+        } if (ValorDaCompra >= 300 && ValorDaCompra <= 499.99) {
+            alert("Parabéns! Você recebeu 10% de desconto. O valor da compra com desconto é R$ " + (ValorDaCompra - ValorTotalComDesconto10) + " reais.");
+        } else {
+            alert("Parabéns! Você recebeu 20% de desconto. O valor da compra com desconto é R$ " + (ValorDaCompra - ValorTotalComDesconto20) + " reais.");
+        }
+
+
+    // SOLUÇÃO ENSINADA PELO PROFESSOR
+         
+        let ValorDaCompra = prompt("Qual o valor da compra?");
+
+        //  A FUNÇÃO ABAIXO APLICA O DESCONTO E OBRIGA A REALIZAR A OPERACAO DE SUBTRACAO NO ALERTA. 
+        // CASO CONTRARIO O ALERTA MOSTRARÁ O RESULTADO DO DESCONTO APLICADO E NÃO O VALOR DA COMPRA APÓS APLICAÇÃO DO DESCONTO.
+        // A OUTRA OPÇÃO SERIA UTILIZAR O VALOR DE 0.90 PRA O DESCONTO DE 10% E 0.80 PARA O DESCONTO DE 20%. 
+        // DESTA FORMA N]AO HAVERIA NECESSIDADE DE OPERAÇÃO NO ALERTA MAS APENAS A IMPRESSÃO DA VARIAVEL RESULTADODESCONTO.
+        
+        let percentualDeDescontosProgressivo = {
+            "10%": 0.10,
+            "20%": 0.20,
+        }
+
+        ValorDaCompra = parseFloat(ValorDaCompra);
+             
+        if (ValorDaCompra <= 299.99) {
+            alert("O valor da compra é R$ " + ValorDaCompra + " reais.");
+        } if (ValorDaCompra >= 300 && ValorDaCompra <= 499.99) {
+            let resultadoDesconto = ValorDaCompra * percentualDeDescontosProgressivo["10%"];
+                        alert("Parabéns! Você recebeu 10% de desconto. O valor da compra com desconto é R$ " + (ValorDaCompra - resultadoDesconto) + " reais.");
+        } else {
+            let resultadoDesconto = ValorDaCompra * percentualDeDescontosProgressivo["20%"];
+                        alert("Parabéns! Você recebeu 20% de desconto. O valor da compra com desconto é R$ " + (ValorDaCompra - resultadoDesconto) + " reais.");
+        }
+
+
+    </script>
+</body>
+
+</html>
