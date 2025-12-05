@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Condicionais - Atividade 5</title>
+</head>
+<body>
+    <script>
+
+        // Atividade 5: Sistema Educacional - Cálculo de Média e Aprovação
+        // Um sistema escolar precisa calcular a média de um aluno e determinar sua situação acadêmica:
+        // Média maior ou igual a 7: "Aprovado"
+        // Média entre 5 e 6,9: "Recuperação"
+        // Média abaixo de 5: "Reprovado"
+        // O programa deve receber três notas, calcular a média e exibir a situação do aluno.
+
+        // Função para calcular a média e determinar a situação do aluno
+        let nota1 = parseFloat(prompt("Digite a primeira nota:"));
+        let nota2 = parseFloat(prompt("Digite a segunda nota:"));
+        let nota3 = parseFloat(prompt("Digite a terceira nota:"));
+        
+        let media = (nota1 + nota2 + nota3) / 3;
+        alert("Média igual a " + media);
+
+            // Determina a situação do aluno com base na média
+
+            if (media >= 7) {
+                alert("O aluno está aprovado!");
+            } else if (media >= 5 && media < 7) {
+                alert("O aluno ficou em recuperação!");
+            } else {
+                alert("O aluno está reprovado!");
+            }
+        
+    </script>
+</body>
+</html>

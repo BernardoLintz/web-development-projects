@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio condicionais - Atividade 7</title>
+</head>
+<body>
+    
+    <script>
+// Atividade 7: E-commerce - Frete Grátis
+// Uma loja virtual oferece frete grátis para compras acima de R$ 100,00.
+// Caso contrário, é cobrada uma taxa fixa de R$ 15,00 pelo frete.
+// Crie um programa que receba o valor da compra e informe se o frete é gratuito ou o valor total a pagar com o frete incluso.
+
+// Solicita ao usuário que informe o valor da compra
+
+let valorDaCompra = parseFloat(prompt("Digite o valor total da sua compra:"));
+
+// Verifica se o valor da compra é maior que R$ 100,00
+
+if(valorDaCompra > 100){
+    alert("Parabéns! Sua compra tem frete grátis.");
+} else {        
+    let valorTotal = valorDaCompra + 15;
+    alert("O valor total da sua compra, incluindo o frete de R$ 15,00, é de R$ " + valorTotal + " reais.");
+}
+    </script>
+</body>
+</html>

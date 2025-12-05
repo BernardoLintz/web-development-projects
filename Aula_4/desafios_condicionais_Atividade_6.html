@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio condicionais - Atividade 6</title>
+</head>
+<body>
+    <script>
+
+    // Atividade 6: Sistema Educacional - Acesso à Plataforma Online
+    // Uma plataforma de cursos online permite acesso somente para alunos que estão com o pagamento em dia.
+    // Se estiver pago (true), exibir: "Acesso concedido".
+    // Se não estiver pago (false), exibir: "Acesso negado. Faça o pagamento."
+    // Crie um programa que receba um valor booleano (true ou false) indicando se o aluno está com o pagamento
+    // em dia e exiba a mensagem correspondente.
+
+    // Solicita ao usuário que informe se o pagamento está em dia
+    // Utiliza um loop (Do/While) para garantir que a entrada seja válida (1 ou 0) 
+    // antes de prosseguir com a verificação do acesso.
+    // Declara a variável resposta fora do loop para que possa ser acessada após o término do loop.
+    
+    let resposta;
+
+    do {
+    let pagamentoEmDia = prompt("Você está com o pagamento em dia? Digite 1 para sim e 0 para não.");
+    resposta = parseInt(pagamentoEmDia);
+
+    //Verifica duas coisas: 
+    // Se resposta é null — ou seja, o usuário não digitou nada ou cancelou.
+    // Se resposta não é nem 0 nem 1 — ou seja, o usuário digitou algo que não seja "0" nem "1".
+    // Se qualquer uma dessas condições for verdadeira, o código dentro do if será executado e a
+    // mensagem de erro será mostrada ao usuário.
+
+    if(resposta == null || (resposta !== 0 && resposta !== 1)){
+        alert("Por favor, digite um valor válido: 1 para sim e 0 para não.");
+    }
+ }  while (resposta == null || (resposta !== 0 && resposta !== 1)) {
+    } 
+    
+    if(resposta === 1){
+        alert("Parabéns! Você está com o pagamento em dia. Acesso concedido!");
+    } else {
+        alert("Acesso negado. Faça o pagamento!");
+    }
+    </script>
+</body>
+</html>

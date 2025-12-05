@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio condicionais - Atividade 9</title>
+</head>
+<body>
+    
+    <script>
+
+    // Atividade 9: Saúde - Agendamento de Consulta
+    // Um sistema de agendamento de consultas médicas precisa verificar se a clínica está aberta.
+    // As consultas só podem ser marcadas de segunda a sábado.
+    // Se o usuário tentar agendar no domingo, o sistema deve exibir "Clínica fechada".
+    // Caso contrário, exibir "Consulta agendada".
+    // Crie um programa que receba o dia da semana e exiba a mensagem correspondente.
+    
+    let diaDaSemana = prompt("Digite o dia da semana para agendar sua consulta? ");
+    
+    // Converte a entrada para minúsculas para facilitar a comparação
+    // Isso permite que o usuário digite "Domingo", "domingo", "DOMINGO", etc.
+    diaDaSemana = diaDaSemana.toLowerCase();
+
+    if(diaDaSemana === "domingo"){
+        alert("Clínica fechada.");
+    } else {
+        alert("Consulta agendada.");
+    }
+
+    </script>
+</body>
+</html>

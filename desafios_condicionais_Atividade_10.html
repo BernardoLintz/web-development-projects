@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafios condicionais - Atividade 10</title>
+</head>
+<body>
+    
+    <script>
+
+    // Atividade 10: Saúde - Plano de Saúde
+    // Um plano de saúde possui uma regra que impede pacientes com mais de 60 anos no plano "Básico" de terem cobertura
+    // para internações.
+    // Crie um programa que receba a idade do paciente e o tipo de plano ("Básico" ou "Premium") e informe se a cobertura
+    // inclui internação ou não.
+
+    let idade = parseInt(prompt("Digite a sua idade:"));
+    let plano = prompt("Digite o tipo de plano (Básico ou Premium):");
+   plano = plano.toLowerCase();
+
+   if(plano === "básico" && idade > 60){
+    alert("Desculpe, pacientes com mais de 60 anos no plano Básico não têm cobertura para internações.");
+    } else {
+        alert("Seu plano inclui cobertura para internações.");
+    }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Condicionais - Atividade 4</title>
+</head>
+<body>
+    
+<script>
+    
+    //  // Atividade 4: Mercado - Verificação de Estoque 
+    // Uma loja online precisa verificar se há estoque suficiente para atender um pedido.
+    // Se a quantidade solicitada pelo cliente for maior do que a disponível, exiba a mensagem "Estoque insuficiente".
+    // Caso contrário, exiba "Pedido aprovado".
+    // Crie um programa que receba a quantidade solicitada e a quantidade em estoque e exiba a mensagem correspondente.
+
+    let quantidadeEstoque = 10;
+    let quantidadeSolicitada = prompt("Qual a quantidade solicitada?");
+    parseInt(quantidadeSolicitada);
+    parseInt(quantidadeEstoque);
+    if(quantidadeEstoque < quantidadeSolicitada){
+        alert("Estoque insuficiente!");
+    } else {
+        alert("Pedido aprovado!");
+    }
+
+</script>
+
+</body>
+</html>
